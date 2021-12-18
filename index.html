@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Hey there. What are you doing in here? CSS and JS borrowed from kito@kito.us, thanks Keith. -->
+<!--
+    Hey there. What are you doing in here?
+     
+    I like your style, though. Who digs through HTML anymore?
+
+    My early websites on the internet were all hand coded, and I remember
+    endless hours at night tweaking table driven layouts and marveling at the
+    release of CSS and HTML 4. 
+
+    In fact, one of my earliest paying jobs was to be a webmaster for GameSpy,
+    where I ran the PlanetBattlezone website. My first introduction to banner
+    ads and a real paycheck! They merged my fan site, gave me editor rights,
+    and made me the Site Director. I omitted the fact that I had just became a
+    teenager at 13.
+
+    Large portions of CSS and JS borrowed from Keith Ito, thanks Keith!
+-->
 
 <head>
     <title>Adrian Wong</title>
     <link rel="preload" href="https://almostsquare.com/img/main/logo.jpg" as="image" type="image/jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Roboto+Condensed&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         html {
             -ms-text-size-adjust: 100%;
@@ -26,6 +42,11 @@
             line-height: 1.8;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .dark-mode {
+            background: #000;
+            color: #ddd
         }
 
         a {
@@ -73,7 +94,6 @@
             font-weight: 400;
             margin: 1.8em 0;
             line-height: 1.35;
-            color: #000;
         }
 
         p {
@@ -111,15 +131,6 @@
 
         .name {
             font-weight: 600;
-            color: #000;
-        }
-
-        .subtitle {
-            font-family: Barlow, sans-serif;
-            font-size: 24px;
-            font-weight: 400;
-            margin: 36px 0 12px;
-            color: #333;
         }
 
         .img-med {
@@ -180,6 +191,16 @@
             }
         }
 
+        @media (prefers-color-scheme: dark) {
+            body{
+                color: #ddd;
+                background: #000;
+            }
+            a{
+                color: #0e9ac5
+            }
+        }
+
         @keyframes slide {
             0% {
                 opacity: 0;
@@ -231,12 +252,17 @@
             <div id="main" class="col">
                 <h1 id="title">👋 Hi! I'm <span class="name">Adrian Wong</span>, a human living in the San Francisco Bay Area.</h1>
                 <div id="about">
-                    <p>I have worked with great people on many fun and interesting projects—
-                        securing US nuclear weapons,
-                        designing the first Google Glass, and
+                    <p>I have worked with great people on many fun and interesting projects, usually as a hardware engineer.
+                        I have gone from
+                        making security systems for US nuclear weapons to
+                        designing the first Google Glass and
                         manufacturing the first Oculus Rift CV1.
                     </p>
-                    <p>You can find out more if you are curious about
+                    <p>
+                        I currently spend time with the Google Brain team on
+                        applying machine learning to industrial automation and robotics.
+                    </p>
+                    <p>You can find out more about past projects if you are curious by digging through 
                         <a href="https://patents.google.com/?inventor=Adrian+Wong&amp;assignee=Google&amp;num=100">Google Patents</a>
                         or reading random stories from around the web:
                         <a href="https://techcrunch.com/2014/05/15/adrian-wong-oculus/">TechCrunch (2014)</a>,
@@ -244,10 +270,7 @@
                         <a href="https://www.engadget.com/2007-05-12-students-bring-pong-and-lasers-together-at-last.html">Engadget (2007)</a>,
                         <a href="https://gizmodo.com/pong-anytime-anywhere-259453">Gizmodo (2007)</a>.
                     </p>
-                    <p>
-                        I currently spend time with the Google Brain team on
-                        applying machine learning to industrial automation and robotics.
-                    </p>
+
                 </div>
                 <p id="email">You can reach <a href="mailto:me@almostsquare.com">me at almostsquare.com</a>.</p>
             </div>
