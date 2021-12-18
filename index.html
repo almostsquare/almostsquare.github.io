@@ -20,11 +20,17 @@
 -->
 
 <head>
-    <title>Adrian Wong</title>
-    <link rel="preload" href="https://almostsquare.com/img/main/logo.jpg" as="image" type="image/jpeg" />
+    <meta charset="utf-8">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://almostsquare.com/img/main/logo.jpg" as="image" type="image/jpeg" />    
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <title>Adrian Wong</title>
+    <meta name="author" content="Adrian Wong">
+
     <style>
         html {
             -ms-text-size-adjust: 100%;
@@ -42,11 +48,6 @@
             line-height: 1.8;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-        }
-
-        .dark-mode {
-            background: #000;
-            color: #ddd
         }
 
         a {
@@ -221,13 +222,13 @@
         function a(i, s) { document.getElementById(i).style = s }
         function y(d) { return 'animation:1.2s cubic-bezier(.2,1,.3,1) '+d+'s both slide' }
         window.onload = function () {
+            a('title', y(.1));
             a('photo', y(.2));
+            a('about', y(.3));
+            a('email', y(.5));
             a('ic0', y(.5));
             a('ic1', y(.6));
             a('ic2', y(.7));
-            a('title', y(.1));
-            a('about', y(.2));
-            a('email', y(.5));
             document.body.style = '';
         }
     </script>
